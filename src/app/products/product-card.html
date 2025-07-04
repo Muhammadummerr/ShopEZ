@@ -1,0 +1,13 @@
+<div
+  class="product-card" (click)="viewDetails()"
+  #card
+  [style.transform]="'rotateX(' + rotationX + 'deg) rotateY(' + rotationY + 'deg)'"
+  (mousemove)="onMouseMove($event, card)"
+  (mouseleave)="resetRotation()"
+>
+  <div class="image-container" >
+    <img [src]="product.image" alt="{{ product.title }}" />
+  </div>
+  <h3 class="title">{{ product.title }}</h3>
+  <p class="price">${{ product.price }}</p>
+</div>

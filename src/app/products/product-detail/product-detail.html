@@ -1,0 +1,15 @@
+<div *ngIf="product as p; else loading">
+  <div class="product-detail">
+    <img [src]="p.image" [alt]="p.title" />
+    <h2>{{ p.title }}</h2>
+    <p class="price">${{ p.price }}</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </p>
+    <button class="buy-btn">Add to Cart</button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p class="loading">Loading product details...</p>
+</ng-template>

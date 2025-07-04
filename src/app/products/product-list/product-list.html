@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1 class="page-title">Product List</h1>
+  <p class="page-subtitle">
+    439 inspirational designs, illustrations, and graphic elements from the world’s best designers.
+  </p>
+</div>
+
+<div class="loading" *ngIf="loading || products.length === 0">Loading...</div>
+
+
+<div class="product-grid" *ngIf="!loading">
+  <app-product-card *ngFor="let product of products" [product]="product" />
+</div>
